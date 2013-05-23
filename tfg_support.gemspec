@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = TfgSupport::VERSION
   spec.authors       = ["Courtney de Lautour"]
   spec.email         = ["clautour@thefrontiergroup.com.au"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A collection of helper methods / extensions for Ruby}
+  spec.summary       = %q{A collection of helper methods / extensions for Ruby}
+  spec.homepage      = "https://github.com/Amerdrix/TFG-support"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
