@@ -4,7 +4,7 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'tfg_support', git: "git@github.com:Amerdrix/TFG-support.git"
+    gem 'tfg_support'
 
 And then execute:
 
@@ -28,8 +28,9 @@ with
 
     value = hash.deep[:foo, :bar, :baz]
 
-also works for setting, creating a new hash one isn't present
+also works for setting. New hashes will be created for missing keys.
 
+    hash = {:foo=>{:bar=>{:baz=>:fizz}}}
     hash.deep[:foo, :bar, :baz] = :frob
     hash.deep[:foo, :missing_key, :baz] = :frob
 
