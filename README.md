@@ -1,24 +1,41 @@
 # TfgSupport
 
-TODO: Write a gem description
-
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'tfg_support'
+    gem 'tfg_support', git: "git@github.com:Amerdrix/TFG-support.git"
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install tfg_support
-
 ## Usage
 
-TODO: Write usage instructions here
+Provides some useful extentions to ruby classes.
+
+### [Hash] (http://ruby-doc.org/core-2.0/Hash.html)
+
+#### #deep
+
+Allows access to hashes nested with in other hashes.
+
+Replace
+
+    value = some_hash[:foo][:bar][:baz] if some_hash[:foo] && some_hash[:foo][:bar]
+
+with
+
+    value = hash.deep[:foo, :bar, :baz]
+
+also works for setting, creating a new hash one isn't present
+
+    hash.deep[:foo, :bar, :baz] = :frob
+    hash.deep[:foo, :missing_key, :baz] = :frob
+
+    hash
+     => {:foo=>{:bar=>{:baz=>:frob}, :missing_key=>{:baz=>:frob}}}
+
 
 ## Contributing
 
