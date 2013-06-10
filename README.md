@@ -37,7 +37,6 @@ also works for setting. New hashes will be created for missing keys.
     hash
      => {:foo=>{:bar=>{:baz=>:frob}, :missing_key=>{:baz=>:frob}}}
 
-
 ## Contributing
 
 1. Fork it
