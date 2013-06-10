@@ -37,6 +37,13 @@ also works for setting. New hashes will be created for missing keys.
     hash
      => {:foo=>{:bar=>{:baz=>:frob}, :missing_key=>{:baz=>:frob}}}
 
+### [String] (http://ruby-doc.org/core-2.0/String.html)
+
+#### to_boolean
+
+Converts strings `'true' 't' 'yes' 'y' '1'` to `true`
+and `'false' 'f' 'no' 'n' '0'` to `false`
+
 ## Contributing
 
 1. Fork it
