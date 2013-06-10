@@ -37,6 +37,7 @@ also works for setting. New hashes will be created for missing keys.
     hash
      => {:foo=>{:bar=>{:baz=>:frob}, :missing_key=>{:baz=>:frob}}}
 
+### [String] (http://ruby-doc.org/core-2.0/String.html)
 
 ## Contributing
 
