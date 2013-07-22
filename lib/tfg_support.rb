@@ -1,9 +1,12 @@
-require "tfg_support/version"
+require "tfg/support/version"
 
-module TfgSupport
-  autoload :DeepHashAccessor, "tfg_support/deep_hash_accessor"
-  autoload :Sequence, "tfg_support/sequence"
+module TFG
+  module Support
+    autoload :DeepHashAccessor, "tfg/support/deep_hash_accessor"
+    autoload :Sequence, "tfg/support/sequence"
+  end
 end
 
-require "tfg_support/hash"
-require "tfg_support/string"
+Dir["tfg/support/core_ext/**/*"].each do |file|
+  require file
+end
