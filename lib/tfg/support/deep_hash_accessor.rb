@@ -13,7 +13,7 @@ module TFG
         if tail.empty?
           hash[head]
         else
-          hash[head].deep[*tail]
+          hash[head].deep[*tail] if hash[head]
         end
       end
 
