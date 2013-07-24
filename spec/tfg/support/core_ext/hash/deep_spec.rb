@@ -7,6 +7,6 @@ describe Hash do
     subject(:deep) { hash.deep }
 
     specify { expect(deep).to be_a TFG::Support::DeepHashAccessor }
-    specify { expect(deep.hash).to eq hash }
+    specify { expect(deep.send(:hash)).to eq hash }
   end
 end

@@ -1,8 +1,6 @@
 module TFG
   module Support
     class DeepHashAccessor
-      attr_accessor :hash
-
       def initialize(hash)
         self.hash = hash
       end
@@ -27,6 +25,10 @@ module TFG
           hash[head].deep[*tail] = value
         end
       end
+
+      private
+
+      attr_accessor :hash
     end
   end
 end
