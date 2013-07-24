@@ -1,3 +1,5 @@
+require "tfg/support/deep_hash_accessor"
+
 class Hash
   # Allows chaining of keys through nested hashes.
   #
