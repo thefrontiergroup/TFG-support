@@ -1,42 +1,33 @@
-# TfgSupport
+# TFG::Support
+
+A collection of handy helpers and extentions to the Ruby core library.
+Should only contain application-nonspecific code that is of general use.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'tfg_support'
+```ruby
+gem "tfg_support"
+```
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
-## Usage
+This gem does not depend on `active_support`, however, if you with to use `Hash#with_indifferent_equality` you must ensure that `active_support` is loaded before `tfg_support`.
 
-Provides some useful extentions to ruby classes.
+## Documentation
 
-### [Hash] (http://ruby-doc.org/core-2.0/Hash.html)
+The codebase is documented using `yard`.
 
-#### #deep
+Documentation can be viewed in the source tree or at [RubyDoc](http://rubydoc.info/github/thefrontiergroup/thefrontiergroup-tfg_support/master/frames).
 
-Allows access to hashes nested with in other hashes.
+## Versioning
 
-Replace
-
-    value = some_hash[:foo][:bar][:baz] if some_hash[:foo] && some_hash[:foo][:bar]
-
-with
-
-    value = hash.deep[:foo, :bar, :baz]
-
-also works for setting. New hashes will be created for missing keys.
-
-    hash = {:foo=>{:bar=>{:baz=>:fizz}}}
-    hash.deep[:foo, :bar, :baz] = :frob
-    hash.deep[:foo, :missing_key, :baz] = :frob
-
-    hash
-     => {:foo=>{:bar=>{:baz=>:frob}, :missing_key=>{:baz=>:frob}}}
-
+This project uses [Semantic Versioning](http://semver.org).
 
 ## Contributing
 
@@ -44,4 +35,4 @@ also works for setting. New hashes will be created for missing keys.
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+5. Create a Pull Request
