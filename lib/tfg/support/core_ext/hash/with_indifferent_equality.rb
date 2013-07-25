@@ -1,4 +1,4 @@
-if defined? Hash.new.with_indifferent_access
+if defined? ActiveSupport
   class Hash
     # Will return a new hash that does not differentiate
     # between string and symbol keys for equality.

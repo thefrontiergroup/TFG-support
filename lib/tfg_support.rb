@@ -1,5 +1,9 @@
 require "tfg/support/version"
 
+if defined? ActiveSupport
+  require "active_support/core_ext/hash/indifferent_access"
+end
+
 module TFG
   module Support
     autoload :DeepHashAccessor, "tfg/support/deep_hash_accessor"

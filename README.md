@@ -17,6 +17,8 @@ And then execute:
 $ bundle
 ```
 
+This gem does not depend on `active_support`, however, if you with to use `Hash#with_indifferent_equality` you must ensure that `active_support` is loaded before `tfg_support`.
+
 ## Documentation
 
 The codebase is documented using `yard`.
