@@ -21,7 +21,11 @@ $ bundle
 
 The codebase is documented using `yard`.
 
-Documentation can be viewed in the source tree or at [RubyDoc](http://rubydoc.info/github/thefrontiergroup/thefrontiergroup-support/master/frames).
+Documentation can be viewed in the source tree or at [RubyDoc](http://rubydoc.info/github/thefrontiergroup/thefrontiergroup-tfg_support/master/frames).
+
+## Versioning
+
+This project uses [Semantic Versioning](http://semver.org).
 
 ## Contributing
 
