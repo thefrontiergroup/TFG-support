@@ -28,8 +28,10 @@ class Object
   #   end
   # end
   # ```
-  def as
+  def _as
     result = yield(self)
     result.nil? ? self : result
   end
+
+  alias_method :as, :_as
 end
