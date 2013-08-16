@@ -1,6 +1,6 @@
 # TFG::Support
 
-A collection of handy helpers and extentions to the Ruby core library.
+A collection of handy helpers and extensions to the Ruby core library.
 Should only contain application-nonspecific code that is of general use.
 
 ## Installation
