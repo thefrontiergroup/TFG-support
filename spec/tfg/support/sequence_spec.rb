@@ -1,25 +1,50 @@
 require "spec_helper"
 
 describe TFG::Support::Sequence do
-  subject(:sequence) { TFG::Support::Sequence.new(first, generator) }
+  context 'created with a generator' do
+    subject(:sequence) { TFG::Support::Sequence.new(first, generator) }
 
-  describe "#next" do
-    let(:first) { Object.new }
-    let(:second) { Object.new }
-    let(:generator) { double("generator", call: second) }
+    describe "#next" do
+      let(:first) { Object.new }
+      let(:second) { Object.new }
+      let(:generator) { double("generator", call: second) }
 
-    subject(:call) { sequence.next }
+      subject(:next_call) { sequence.next }
 
-    context "on the first call" do
-      specify { expect(call).to eq first }
-      specify { call; expect(generator).to_not have_received(:call) }
-    end
+      context "on the first call to next" do
+        specify { should eq first }
+      end
 
-    context "on susequent calls" do
-      before { sequence.next }
+      context "on subsequent calls to next" do
+        before { sequence.next }
 
-      specify { expect(call).to eq second }
-      specify { call; expect(generator).to have_received(:call).with(first) }
+        specify { should eq second }
+      end
     end
   end
-end 
+
+  context 'created with a block' do
+    subject(:sequence) { TFG::Support::Sequence.new(1) { |arg| arg * 2 } }
+
+    describe '#next' do
+      subject(:next_call) { sequence.next }
+
+      context "on the first call to next" do
+        specify { should eq 1 }
+      end
+
+      context "on the 2nd call to next" do
+        before { sequence.next }
+        specify { should eq 2 }
+      end
+
+      context "on the 3rd call to next" do
+        before { sequence.next; sequence.next }
+        specify { should eq 4 }
+      end
+
+    end
+
+  end
+
+end
