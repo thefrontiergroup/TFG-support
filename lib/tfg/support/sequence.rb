@@ -1,9 +1,9 @@
 module TFG
   module Support
     class Sequence
-      def initialize(first, generator)
+      def initialize(first, generator=nil, &block)
         self.first = first
-        self.generator = generator
+        self.generator = generator || block
       end
 
       def next
