@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "active_support"
   spec.add_development_dependency "simplecov-rcov"
   spec.add_development_dependency "rspec_junit_formatter"
+  spec.post_install_message = "Gem is deprecated and no longer maintained."
 end
